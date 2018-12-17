@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <p>{{pageTitle}}</p>
+    </ion-title>
+
+    <ion-buttons right>
+      <button *ngIf="!anySelection" padding ion-button icon-only outline (click)="selectAll()">
+        <ion-icon name="md-checkmark"></ion-icon>
+        <p>ALL</p>
+      </button>
+
+      <button *ngIf="anySelection" padding ion-button icon-only outline (click)="clearAll()">
+        <ion-icon name="md-close"></ion-icon>
+        <p>CLEAR</p>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of multiSelectionItems" (click)="selectUnselectedItem(item)">
+      <ion-icon [class.isSelected]="!item.isSelected" item-start name="md-checkmark"></ion-icon>
+
+      <ion-row>
+        <p class="item-name">{{item.name}}</p>
+        <p class="item-count">({{item.count}})</p>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer padding>
+  <button ion-button full (click)="closeMultiSelection()">
+    <p>DONE</p>
+  </button>
+</ion-footer>

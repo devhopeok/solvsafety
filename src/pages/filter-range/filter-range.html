@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        <p>{{pageTitle}}</p>
+      </ion-title>
+  
+      <ion-buttons right>  
+        <button padding ion-button icon-only outline (click)="reset()">
+          <p>RESET</p>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-range dualKnobs="true" pin="true" [(ngModel)]="priceRange" color="dark" min="20" max="500">
+      <p range-left>$20</p>
+      <p range-right>$500</p>
+    </ion-range>
+  </ion-content>
+  
+  <ion-footer padding>
+    <button ion-button full (click)="closePriceRange()">
+      <p>DONE</p>
+    </button>
+  </ion-footer>

@@ -1,0 +1,78 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.welcome-title {
+    background-color: map-get($colors, primary);
+
+    p {
+        color: white;
+    }
+}
+
+.toolbar-title-md, .toolbar-title-ios {
+    font-family: 'FuturaTEEMed Regular';
+    color: map-get($colors, primary);
+}
+
+p {
+    color: map-get($colors, primary);
+    font-family: 'FuturaTEEMed Regular';
+}
+
+.side-menu-item {
+    ion-icon {
+        font-weight: bold;        
+    }
+
+    .label-md {
+        margin: 0px;
+        font-family: 'FuturaTEEMed Regular';
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+.navbar-button {
+    ion-icon {
+        color: map-get($colors, primary);
+    }
+}
+
+.menu-list {
+    border-bottom: 3px solid lightgrey;
+
+    ion-list-header {
+        p {
+            color: map-get($colors, primary);
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    ion-item {
+        p {
+            color: map-get($colors, primary);
+        }
+    }
+}
+
+@font-face {
+    font-family: 'FuturaTEEMed Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: local('FuturaTEEMed Regular'), local('FuturaTEEMed Regular'), url("../assets/fonts/FuturaTEEMed Regular.ttf") format('woff2');
+}

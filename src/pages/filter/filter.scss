@@ -1,0 +1,25 @@
+page-filter {
+    ion-content.content-md[padding] .scroll-content, 
+    ion-content.content-ios[padding] .scroll-content {
+        padding: 0px !important;
+    }
+
+    .content {
+        background-color: lightgray;
+
+        .filter-type {
+            color: map-get($colors, primary);
+            font-size: 16px;
+        }
+    }
+
+    ion-footer {
+        color: map-get($colors, primary);
+
+        p {
+            color: white;
+            text-transform: none;
+            font-size: 16px;
+        }
+    }
+}

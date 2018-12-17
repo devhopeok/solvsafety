@@ -1,0 +1,42 @@
+page-bag {
+    ion-title {
+        p {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        ion-icon {
+            margin-left: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+    .content {
+        img {
+            max-height: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bag-empty {
+            color: map-get($colors, primary);
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .bag-description {
+            margin: 0 50px;
+        }
+
+        button {
+            margin-top: 30px;
+        }
+
+        .start-shopping {
+            background-color: white;
+            color: map-get($colors, primary);
+        }
+    }
+}

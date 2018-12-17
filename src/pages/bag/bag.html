@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>MY BAG</ion-title>
+
+    <ion-buttons right>
+      <button class="navbar-button" ion-button icon-only (click)="goToSavedItems()">
+        <ion-icon name="md-heart-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-col text-center>
+    <img src="https://res.cloudinary.com/cediim8/image/upload/v1523427246/sad-face.png">
+
+    <p class="bag-empty">YOUR BAG IS EMPTY</p>
+
+    <p class="bag-description">Items are reserved for you in your bag for 60 minutes and are then moved to Saved Items.</p>
+
+    <button ion-button full (click)="goToSavedItems()">
+      VIEW SAVED ITEMS
+    </button>
+
+    <button class="start-shopping" ion-button full (click)="goToHome()">
+      START SHOPPING
+    </button>
+  </ion-col>
+</ion-content>

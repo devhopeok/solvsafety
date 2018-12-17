@@ -1,0 +1,10 @@
+page-product-size-pop-over {
+    .label-md, .label-ios{
+        margin: 0px;
+    }
+    
+    .out-of-stock {
+        text-decoration: line-through;
+        color: red;
+    }
+}

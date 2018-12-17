@@ -1,0 +1,380 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <p>{{pageTitle}}</p>
+    </ion-title>
+
+    <ion-buttons right>
+      <button class="navbar-button" ion-button icon-only (click)="goToSavedItems()">
+        <ion-icon name="md-heart-outline"></ion-icon>
+      </button>
+
+      <button class="navbar-button" ion-button icon-only>
+        <ion-icon name="md-search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item no-lines>
+    <button item-start class="recommended-button" ion-button clear (click)="showPopOver($event)">
+      <p>RECOMMENDED</p>
+      <ion-icon name="ios-arrow-down"></ion-icon>
+    </button>
+
+    <button item-end class="filter-button" ion-button clear (click)="showFilter()">
+      <p>FILTER</p>
+    </button>
+  </ion-item>
+
+  <ion-row>
+    <ion-col text-center>
+      <p class="items-found">200 items found</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-grid *ngIf="isMenSelected">
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-1.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$40.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Pull&Bear Denim Jacket In Black</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-2.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$89.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Liquor N Poker Oversized Denim Jacket Stonewas</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-9.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$110.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Puma T7 Vintage Track Jacket In White 57498506</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-10.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$40.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Pull&Bear Bomber Jacket In Green</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-3.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$105.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Cheap Monday Upszied Black Denim Jacket</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-4.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$218.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Lee Sherpa Rider Denim Jacket Mid Wash</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-5.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$99.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Kappa Poly Tricot Track Jacket With Banda Tapin</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-6.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$111.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Champion Track Jacket With Taping In Navy</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-7.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$111.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Champion Track Jacket With Taping In Purple</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523344614/product-8.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$50.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">New Look Cotton Bomber Jacket In Burgundy</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="!isMenSelected">
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415018/women-product-1.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$40.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">ASOS Cotton Mini Shirt Dress</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415018/women-product-2.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$40.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Stradivarius Polka Dot Shirt Dress</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415018/women-product-3.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$30.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">ASOS Ultimate Rolled Sleeve T-Shirt Dress With Tab</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415018/women-product-4.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$40.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Boohoo One Shoulder Floral Midi Dress</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415018/women-product-5.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$44.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Boohoo Off Shoulder Lemon Print Dress</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415017/women-product-6.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$168.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">ASOS Embellished Cluster Crop Top Tulle Midi Dress</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415017/women-product-7.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$135.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">ASOS DESIGN Sheer & Solid Printed Midi Dress In Floral Print</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415017/women-product-8.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$109.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">ASOS Embroidered Mini Drop Waist Dress</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415289/women-product-9.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$36.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">Stradivarius Short Sleeve Stripe Dress</p>
+        </ion-row>
+      </ion-col>
+
+      <ion-col>
+        <ion-row class="product-row">
+          <img class="product-image" (click)="goToProductDetails()" src="https://res.cloudinary.com/cediim8/image/upload/v1523415289/women-product-10.jpg">
+
+          <ion-item no-lines>
+            <p class="product-price" item-start>$91.00</p>
+
+            <button class="product-like" item-end ion-button clear icon-only>
+              <ion-icon name="md-heart-outline"></ion-icon>
+            </button>
+          </ion-item>
+
+          <p class="product-brand-description">River Island Tie Waist Wrap Front Ruffle Mini Dress</p>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

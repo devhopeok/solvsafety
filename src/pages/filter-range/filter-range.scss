@@ -1,0 +1,20 @@
+page-filter-range {
+    .content {
+        ion-range {
+            p {
+                color: map-get($colors, primary);
+                font-size: 18px;
+            }
+        }
+    }
+
+    ion-footer {
+        color: map-get($colors, primary);
+
+        p {
+            color: white;
+            text-transform: none;
+            font-size: 16px;
+        }
+    }
+}

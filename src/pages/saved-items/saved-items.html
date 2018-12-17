@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      <ion-row>
+        <p class="title">SAVED ITEMS</p>
+        <p class="items-count">({{ itemsCount }} items)</p>
+      </ion-row>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item no-lines class="saved-item" *ngFor="let item of savedItems">
+      <img item-start src="{{ item.picture }}">
+
+      <ion-col *ngIf="!item.isInEditMode">
+        <ion-item class="name-bin" no-lines>
+          <p item-start>{{ item.name }}</p>
+
+          <button item-end ion-button clear icon-only>
+            <ion-icon name="ios-trash-outline"></ion-icon>
+          </button>
+        </ion-item>
+
+        <ion-row *ngIf="!item.hasDiscount">
+          <p class="actual-price">${{ item.price }}</p>
+        </ion-row>
+
+        <ion-row *ngIf="item.hasDiscount">
+          <p class="discounted-price">${{ item.discountedPrice }}</p>
+          <p class="non-discounted-price">${{ item.price }}</p>
+        </ion-row>
+
+        <p class="size-colour" *ngIf="item.sizeAndColourSelected">{{ item.size }} / {{ item.colour }}</p>
+        <p class="select-size-colour" *ngIf="!item.sizeAndColourSelected">SELECT EDIT FOR SIZE AND COLOUR</p>
+
+        <ion-item no-lines>
+          <button class="edit-button" item-start outline ion-button (click)="editItem(item)">
+            <p>EDIT</p>
+          </button>
+
+          <button *ngIf="!item.canAddToBag" class="add-to-bag-button" outline ion-button disabled>
+            <p>ADD TO BAG</p>
+          </button>
+
+          <button *ngIf="item.canAddToBag" class="add-to-bag-button" outline ion-button>
+            <p>ADD TO BAG</p>
+          </button>
+        </ion-item>
+      </ion-col>
+
+      <ion-col *ngIf="item.isInEditMode">
+        <ion-item no-lines class="colour-size" (click)="colourPopOver($event)">
+          <p item-start>COLOUR</p>
+          <ion-icon item-end name="ios-arrow-down"></ion-icon>
+        </ion-item>
+
+        <ion-item no-lines class="colour-size" (click)="sizePopOver($event)">
+          <p item-start>SIZE</p>
+          <ion-icon item-end name="ios-arrow-down"></ion-icon>
+        </ion-item>
+
+        <ion-row>
+          <ion-col text-center (click)="editItem(item)">
+            <button class="cancel-button" ion-button>
+              <p>CANCEL</p>
+            </button>
+          </ion-col>
+
+          <ion-col text-center (click)="editItem(item)">
+            <button class="apply-button" ion-button>
+              <p>APPLY</p>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,163 @@
+page-product-details {
+    ion-content.content-md[padding] .scroll-content, 
+    ion-content.content-ios[padding] .scroll-content {
+        padding: 0px !important;
+    }
+    
+    .content {
+        ion-slides {
+            margin-top: -100px;
+
+            img {
+                width: 120%;
+            }
+
+            .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+                bottom: 120px;
+            }
+        }
+
+        #product-details {
+            margin-top: -100px;
+
+            ion-row {
+                border-bottom: 1px solid lightgray;
+            }
+
+            .play-video {
+                margin-top: 20px;
+                
+                ion-icon {
+                    color: map-get($colors, primary);
+                    font-weight: bold;
+                }
+    
+                p {
+                    color: map-get($colors, primary);
+                    font-weight: bold;
+                }
+            }
+
+            .product-description {
+                color: map-get($colors, primary);
+                font-size: 18px;
+            }
+
+            .product-price {
+                color: map-get($colors, primary);
+                font-size: 18px;
+                font-weight: bolder;
+            }
+
+            .product-count {
+                font-size: 16px;
+                color: gray;
+            }
+
+            .product-size {
+                p {
+                    color: map-get($colors, primary);
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+                ion-icon {
+                    font-size: 18px;
+                    margin-top: 20px;
+                    font-weight: bold;
+                }
+            }
+
+            .add-to-bag {
+                background-color: green;
+
+                p {
+                    color: white;
+                }
+            }
+
+            .product-like {
+                ion-icon {
+                    font-weight: bold;
+                }
+            }
+
+            .product-external-links {
+                font-weight: bold;
+            }
+        }
+
+        #related-products {
+            background-color: lightgray;
+
+            .buy-look-row {
+                background-color: lightgray;
+
+                .buy-the-look {
+                    color: map-get($colors, primary);
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+            
+            ion-scroll[scrollX] {
+                white-space: nowrap;
+                height: 300px;
+                overflow: hidden;
+            
+                .scroll-item {
+                    background-color: white;
+                    display: inline-block;
+                    max-width: 200px;
+                    margin: 10px;
+                }
+            }
+            
+              /* Hide ion-content scrollbar */
+            ::-webkit-scrollbar{
+                display:none;
+            }
+
+            .product-image {
+                max-height: 200px;
+                width: 100%;
+            }
+
+            .item-md, .item-ios {
+                padding-left: 0px;
+                margin: 0px;
+            }
+
+            .discount-price {
+                margin: 0px;
+                color: red;
+                font-size: 14px;
+                font-weight: bolder;
+            }
+
+            .product-price {
+                text-decoration: line-through;
+                margin: 0 0 0 20px;
+                color: map-get($colors, primary);
+                font-size: 14px;
+                font-weight: bolder;
+            }
+    
+            .button-md, .button-ios {
+                background-color: transparent;
+
+                ion-icon {
+                    font-weight: bolder;
+                }
+            }
+
+            .product-brand-description {
+                margin: 0px;
+                color: map-get($colors, primary);
+                font-size: 14px;
+                overflow: hidden; 
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

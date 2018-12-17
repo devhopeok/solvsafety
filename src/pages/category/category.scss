@@ -1,0 +1,66 @@
+page-category {
+    ion-title {
+        p {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        ion-icon {
+            color: map-get($colors, primary);
+            margin-left: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+    ion-content.content-md[padding] .scroll-content, 
+    ion-content.content-ios[padding] .scroll-content {
+        padding: 0px !important;
+    }
+
+    .content {
+        background-color: lightgray;
+
+        .shop-title {
+            margin-left: 16px;
+            color: map-get($colors, primary);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .shopping-category-card {
+            margin: 0px;
+            width: 100%;
+
+            ion-item {
+                border-bottom: 1px solid lightgray;
+
+                p {
+                    color: map-get($colors, primary);
+                    font-size: 16px;
+                }
+            }            
+        }
+
+        .occasions-card {
+            margin: 0px;
+            width: 100%;
+
+            ion-item {
+                background-color: map-get($colors, light);
+
+                p {
+                    color: map-get($colors, primary);
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+                img {
+                    margin: 10px 0;
+                    height: 60px;
+                    width: 60px;
+                }
+            }            
+        }
+    }
+}

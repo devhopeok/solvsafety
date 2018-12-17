@@ -1,0 +1,55 @@
+page-account {
+    ion-content.content-md[padding] .scroll-content, 
+    ion-content.content-ios[padding] .scroll-content {
+        padding: 0px !important;
+    }
+
+    .content {
+        img {
+            border-bottom: 5px solid map-get($colors, primary);
+        }
+        
+        .circle {
+            float: left;
+            position: absolute;
+            left: calc(50% - 40px);
+            top: 145px;
+            z-index: 1000;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            text-align: center;
+            background: #000;
+            margin-top: -50px;
+        }
+
+        .circle-text {
+            font-size: 40px;
+            color: white;
+            font-weight: bolder;
+            margin-top: 15px;
+        }
+
+        .orders-list {
+            margin-top: 50px;
+        }
+
+        ion-list {
+            border-bottom: 3px solid lightgray;
+        }
+
+        ion-item {
+            p {
+                color: map-get($colors, primary);
+            }
+
+            ion-icon {
+                color: map-get($colors, primary);
+                font-weight: bold;
+            }
+        }
+    }
+}

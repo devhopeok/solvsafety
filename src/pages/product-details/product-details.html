@@ -1,0 +1,160 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-buttons right>
+      <button class="navbar-button" ion-button icon-only>
+        <ion-icon name="md-share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen padding>
+  <ion-slides pager>
+    <ion-slide>
+      <img src="{{ photos[0] }}">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="{{ photos[1] }}">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="{{ photos[2] }}">
+    </ion-slide>
+
+    <ion-slide>
+      <img src="{{ photos[3] }}">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid id="product-details">
+    <ion-row>
+      <ion-col text-center>
+        <button class="play-video" ion-button clear icon-only>
+          <ion-icon name="ios-play-outline"></ion-icon>
+          <p>VIDEO</p>
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-item>
+        <p class="product-description">{{ description }}</p>
+        <p class="product-price">${{ price }}.00</p>
+      </ion-item>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p class="product-count">100</p>
+      </ion-col>
+
+      <ion-col>
+        <ion-item class="product-size" (click)="sizePopOver($event)">
+          <p item-start>SIZE</p>
+          <ion-icon item-end name="ios-arrow-down"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-10>
+        <button class="add-to-bag" ion-button full icon-only>
+          <p>ADD TO BAG</p>
+        </button>
+      </ion-col>
+
+      <ion-col col-2>
+        <button class="product-like" item-end ion-button clear icon-only (click)="likeUnlike()">
+          <ion-icon *ngIf="isLiked" name="ios-heart"></ion-icon>
+          <ion-icon *ngIf="!isLiked" name="ios-heart-outline"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <p class="product-external-links">FREE SHIPPING AND RETURNS</p>
+    </ion-row>
+
+    <ion-row>
+      <p class="product-external-links">PRODUCT DETAILS</p>
+    </ion-row>
+
+    <ion-row>
+      <p class="product-external-links">SIZE GUIDE</p>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid id="related-products">
+    <ion-item class="buy-look-row">
+      <p class="buy-the-look" item-start>BUY THE LOOK</p>
+      <p item-end>{{ otherProducts.length }} items</p>
+    </ion-item>
+
+    <ion-scroll scrollX="true" scroll-avatar>
+      <ion-col class="scroll-item" padding>
+        <img class="product-image" src="{{ otherProducts[0].picture }}">
+
+        <ion-item no-lines>
+          <p class="discount-price" item-start>${{ otherProducts[0].discountPrice }}</p>
+
+          <p class="product-price">${{ otherProducts[0].price }}</p>
+
+          <button class="product-like" item-end ion-button clear icon-only>
+            <ion-icon name="md-heart-outline"></ion-icon>
+          </button>
+        </ion-item>
+
+        <p class="product-brand-description">{{ otherProducts[0].name }}</p>
+      </ion-col>
+
+      <ion-col class="scroll-item" padding>
+        <img class="product-image" src="{{ otherProducts[1].picture }}">
+
+        <ion-item no-lines>
+          <p class="discount-price" item-start>${{ otherProducts[1].discountPrice }}</p>
+
+          <p class="product-price">${{ otherProducts[1].price }}</p>
+
+          <button class="product-like" item-end ion-button clear icon-only>
+            <ion-icon name="md-heart-outline"></ion-icon>
+          </button>
+        </ion-item>
+
+        <p class="product-brand-description">{{ otherProducts[1].name }}</p>
+      </ion-col>
+
+      <ion-col class="scroll-item" padding>
+        <img class="product-image" src="{{ otherProducts[2].picture }}">
+
+        <ion-item no-lines>
+          <p class="discount-price" item-start>${{ otherProducts[2].discountPrice }}</p>
+
+          <p class="product-price">${{ otherProducts[2].price }}</p>
+
+          <button class="product-like" item-end ion-button clear icon-only>
+            <ion-icon name="md-heart-outline"></ion-icon>
+          </button>
+        </ion-item>
+
+        <p class="product-brand-description">{{ otherProducts[2].name }}</p>
+      </ion-col>
+
+      <ion-col class="scroll-item" padding>
+        <img class="product-image" src="{{ otherProducts[3].picture }}">
+
+        <ion-item no-lines>
+          <p class="discount-price" item-start>${{ otherProducts[3].discountPrice }}</p>
+
+          <p class="product-price">${{ otherProducts[3].price }}</p>
+
+          <button class="product-like" item-end ion-button clear icon-only>
+            <ion-icon name="md-heart-outline"></ion-icon>
+          </button>
+        </ion-item>
+
+        <p class="product-brand-description">{{ otherProducts[3].name }}</p>
+      </ion-col>
+    </ion-scroll>
+  </ion-grid>
+</ion-content>

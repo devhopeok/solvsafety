@@ -1,0 +1,88 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="welcome-title">
+        <p>Hey,
+          <strong>John Doe</strong>
+        </p>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list class="menu-list" no-lines>
+      <ion-item class="side-menu-item" (click)="goToHome()">
+        <ion-icon name="ios-home-outline" item-start></ion-icon>
+        <button menuClose ion-item>HOME</button>
+      </ion-item>
+
+      <ion-item class="side-menu-item" (click)="goToBag()">
+        <ion-icon name="ios-basket-outline" item-start></ion-icon>
+        <button menuClose ion-item>BAG</button>
+      </ion-item>
+
+      <ion-item class="side-menu-item" (click)="goToSavedItems()">
+        <ion-icon name="md-heart-outline" item-start></ion-icon>
+        <button menuClose ion-item>SAVED ITEMS</button>
+      </ion-item>
+
+      <ion-item class="side-menu-item" (click)="goToMyAccount()">
+        <ion-icon name="ios-person-outline" item-start></ion-icon>
+        <button menuClose ion-item>MY ACCOUNT</button>
+      </ion-item>
+
+      <ion-item class="side-menu-item" (click)="goToAppSettings()">
+        <ion-icon name="ios-settings-outline" item-start></ion-icon>
+        <button menuClose ion-item>APP SETTINGS</button>
+      </ion-item>
+
+      <ion-item class="side-menu-item" (click)="goToHelpAndFaq()">
+        <ion-icon name="ios-information-circle-outline" item-start></ion-icon>
+        <button menuClose ion-item>HELP & FAQS</button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="menu-list">
+      <ion-list-header>
+        <p>MORE ASOS</p>
+      </ion-list-header>
+
+      <ion-item>
+        <p>Unlimited Express Shipping</p>
+      </ion-item>
+
+      <ion-item>
+        <p>10% Student Discount</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="menu-list">
+      <ion-list-header>
+        <p>TELL US WHAT YOU THINK</p>
+      </ion-list-header>
+
+      <ion-item>
+        <p>Help Improve the App</p>
+      </ion-item>
+
+      <ion-item>
+        <p>Rate the App</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="menu-list">
+      <ion-item class="side-menu-item">
+        <ion-icon name="md-log-out" item-start></ion-icon>
+        <button menuClose ion-item>SIGN OUT</button>
+      </ion-item>
+    </ion-list>
+
+    <ion-item>
+      <p>App Version 1.0.0 (100)</p>
+    </ion-item>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

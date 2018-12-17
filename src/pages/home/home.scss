@@ -1,0 +1,47 @@
+page-home {
+    ion-title {
+        p {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        ion-icon {
+            margin-left: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+    .content {
+        .segment-md .segment-button {
+            font-weight: bold;
+            font-family: 'FuturaTEEMed Regular';
+        }
+
+        .freeDeliveryReturns {
+            color: map-get($colors, primary);
+            margin-top: 10px;
+            height: 25px;
+
+            p {
+                color: white;
+                text-transform: none;
+                font-size: 16px;
+            }
+        }
+
+        img {
+            height: 80%;
+            width: 100%;
+        }
+
+        .item-title {
+            margin: 10px 0 0 0;
+        }
+
+        .item-subtitle {
+            margin: 5px 0;
+            color: gray;
+        }
+    }
+}

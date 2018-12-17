@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>FILTER</ion-title>
+
+    <ion-buttons right>
+      <button class="navbar-button" ion-button icon-only (click)="closeFilter()">
+        <ion-icon name="md-close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item (click)="goToMultiSelection('Product Type')">
+    <p class="filter-type" item-start>Product Type</p>
+    <p item-end>All</p>
+  </ion-item>
+
+  <ion-item (click)="goToMultiSelection('Range')">
+    <p class="filter-type" item-start>Range</p>
+    <p item-end>All</p>
+  </ion-item>
+
+  <ion-item (click)="goToMultiSelection('Brand')">
+    <p class="filter-type" item-start>Brand</p>
+    <p item-end>All</p>
+  </ion-item>
+
+  <ion-item (click)="goToMultiSelection('Multipacks')">
+    <p class="filter-type" item-start>Multipacks</p>
+    <p item-end>All</p>
+  </ion-item>
+
+  <ion-item (click)="goToMultiSelection('Size')">
+    <p class="filter-type" item-start>Size</p>
+    <p item-end>All</p>
+  </ion-item>
+
+  <ion-item (click)="goToRangeSelection('Price Range')">
+    <p class="filter-type" item-start>Price Range</p>
+    <p item-end>$20 - $500</p>
+  </ion-item>
+
+  <ion-item (click)="goToMultiSelection('Colour')">
+    <p class="filter-type" item-start>Colour</p>
+    <p item-end>All</p>
+  </ion-item>
+</ion-content>
+
+<ion-footer padding>
+  <button ion-button full (click)="closeFilter()">
+    <p>DONE</p>
+  </button>
+</ion-footer>
