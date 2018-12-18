@@ -24,13 +24,13 @@
 }
 
 .toolbar-title-md, .toolbar-title-ios {
-    font-family: 'FuturaTEEMed Regular';
+    font-family: 'Segoe-UI';
     color: map-get($colors, primary);
 }
 
 p {
     color: map-get($colors, primary);
-    font-family: 'FuturaTEEMed Regular';
+    font-family: 'Segoe-UI';
 }
 
 .side-menu-item {
@@ -40,7 +40,7 @@ p {
 
     .label-md {
         margin: 0px;
-        font-family: 'FuturaTEEMed Regular';
+        font-family: 'Segoe-UI';
         font-size: 14px;
         font-weight: bold;
     }
@@ -71,8 +71,21 @@ p {
 }
 
 @font-face {
-    font-family: 'FuturaTEEMed Regular';
+    font-family: 'Segoe-UI';
     font-weight: normal;
     font-style: normal;
-    src: local('FuturaTEEMed Regular'), local('FuturaTEEMed Regular'), url("../assets/fonts/FuturaTEEMed Regular.ttf") format('woff2');
+    src: local('Segoe-UI'), local('Segoe-UI'), url("../assets/fonts/Segoe-UI.ttf") format('woff2');
+}
+
+.item-inner {
+    border: none !important;
+}
+
+.item {
+    color: map-get($colors, primary);
+}
+
+ion-input {
+    border: 1px solid map-get($colors, primary);
+    padding: 5px 10px;
 }

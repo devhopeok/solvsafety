@@ -7,6 +7,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+
+
 import { MenWomenCategoryPopOverPage } from '../pages/men-women-category-pop-over/men-women-category-pop-over';
 import { BagPage } from '../pages/bag/bag';
 import { SavedItemsPage } from '../pages/saved-items/saved-items';
@@ -23,6 +26,8 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
   declarations: [
     MyApp,
     HomePage,
+    LoginPage,
+
     MenWomenCategoryPopOverPage,
     RecommendedPopOverPage,
     ProductSizePopOverPage,
@@ -42,6 +47,8 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
   entryComponents: [
     MyApp,
     HomePage,
+    LoginPage,
+
     MenWomenCategoryPopOverPage,
     RecommendedPopOverPage,
     ProductSizePopOverPage,
