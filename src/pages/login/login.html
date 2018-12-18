@@ -3,13 +3,13 @@
   <p class="title">Enter your details below to login:</p>
   <ion-item>
     <ion-label color="primary" stacked>Email:</ion-label>
-    <ion-input type="email" placeholder="Enter the email address"></ion-input>
+    <ion-input type="email" placeholder="Enter the email address" [(ngModel)]="loginInfo.email"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label color="primary" stacked>Password:</ion-label>
-    <ion-input type="password" placeholder="Enter the password"></ion-input>
+    <ion-input type="password" placeholder="Enter the password" [(ngModel)]="loginInfo.password"></ion-input>
   </ion-item>
-  <button ion-button icon-start class="login-btn" color="secondary">
+  <button ion-button icon-start class="login-btn" color="secondary" (click)="goHome();">
     <ion-icon padding-right name="ios-log-in"></ion-icon>
     Login
   </button>

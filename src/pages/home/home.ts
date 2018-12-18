@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, PopoverController, Events } from 'ionic-angular';
+import { NavController, PopoverController, Events, MenuController } from 'ionic-angular';
 import { MenWomenCategoryPopOverPage } from '../men-women-category-pop-over/men-women-category-pop-over';
 import { CategoryPage, Category } from '../category/category';
 
@@ -12,11 +12,18 @@ export class HomePage {
   isMenSelected: boolean = true;
   pageTitle: string = 'MEN';
 
-  constructor(public navCtrl: NavController, public popoverCtrl: PopoverController, public events: Events) {
+  constructor(public navCtrl: NavController,
+    public popoverCtrl: PopoverController,
+    public events: Events,
+    public menuCtrl: MenuController) {
     events.subscribe('genderShoppingChanged', (isMenSelected) => {
       this.isMenSelected = isMenSelected;
       this.pageTitle = this.isMenSelected ? 'MEN' : 'WOMEN';
     });
+  }
+
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true);
   }
 
   showPopOver(myEvent) {

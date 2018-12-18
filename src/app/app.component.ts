@@ -29,6 +29,16 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      const lastLoggedIn = new Date(localStorage.getItem('lastLoggedIn'));
+      var timeDiff = new Date().getTime() - lastLoggedIn.getTime();
+      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+
+      if (localStorage.getItem('loginInfo') && diffDays < 28) {
+        this.rootPage = HomePage;
+      } else {
+        this.logOut();
+      }
     });
   }
 
@@ -54,5 +64,11 @@ export class MyApp {
 
   goToHelpAndFaq() {
     this.nav.setRoot(HelpFaqPage);
+  }
+
+  logOut() {
+    localStorage.removeItem('loginInfo');
+    localStorage.removeItem('lastLoggedIn');
+    this.nav.setRoot(LoginPage);
   }
 }

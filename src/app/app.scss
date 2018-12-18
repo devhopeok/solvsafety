@@ -79,6 +79,7 @@ p {
 
 .item-inner {
     border: none !important;
+    padding-right: 16px !important;
 }
 
 .item {
@@ -88,4 +89,8 @@ p {
 ion-input {
     border: 1px solid map-get($colors, primary);
     padding: 5px 10px;
+}
+
+.toast-message {
+    background: #d93f27;
 }
