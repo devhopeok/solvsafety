@@ -8,7 +8,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-
+import { ResetPwdPage } from '../pages/reset-pwd/reset-pwd';
 
 import { MenWomenCategoryPopOverPage } from '../pages/men-women-category-pop-over/men-women-category-pop-over';
 import { BagPage } from '../pages/bag/bag';
@@ -27,6 +27,7 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
     MyApp,
     HomePage,
     LoginPage,
+    ResetPwdPage,
 
     MenWomenCategoryPopOverPage,
     RecommendedPopOverPage,
@@ -48,7 +49,8 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
     MyApp,
     HomePage,
     LoginPage,
-
+    ResetPwdPage,
+    
     MenWomenCategoryPopOverPage,
     RecommendedPopOverPage,
     ProductSizePopOverPage,

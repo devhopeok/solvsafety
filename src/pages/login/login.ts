@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController, Events, MenuController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { ResetPwdPage } from '../reset-pwd/reset-pwd';
 
 @Component({
   selector: 'page-login',
@@ -52,5 +53,9 @@ export class LoginPage {
     });
   
     toast.present();
+  }
+
+  gotoResetPwd() {
+    this.navCtrl.push(ResetPwdPage);
   }
 }

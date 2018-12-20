@@ -86,6 +86,10 @@ p {
     color: map-get($colors, primary);
 }
 
+.item-input-has-focus .item-inner{
+    box-shadow: none !important;
+}
+
 ion-input {
     border: 1px solid map-get($colors, primary);
     padding: 5px 10px;
