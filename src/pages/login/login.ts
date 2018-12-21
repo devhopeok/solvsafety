@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController, Events, MenuController } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { TabsPage } from '../tabs/tabs';
 import { ResetPwdPage } from '../reset-pwd/reset-pwd';
 
 @Component({
@@ -38,7 +38,7 @@ export class LoginPage {
     
     localStorage.setItem('loginInfo', JSON.stringify(this.loginInfo));
     localStorage.setItem('lastLoggedIn', new Date().toString());
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(TabsPage);
   }
 
   presentToast(message) {

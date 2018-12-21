@@ -1,47 +1,38 @@
 page-home {
-    ion-title {
-        p {
-            font-weight: bold;
-            font-size: 18px;
-        }
+  .separate-line {
+    width: 100%;
+    height: 1px;
+    background: lightgray;
+  }
 
-        ion-icon {
-            margin-left: 5px;
-            font-size: 14px;
-            font-weight: bold;
-        }
+  .logo-div {
+    width: 100%;
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+
+    .logo {
+      height: 20vw;
     }
+  }
 
-    .content {
-        .segment-md .segment-button {
-            font-weight: bold;
-            font-family: 'Segoe-UI';
-        }
+  .title {
+    text-align: center;
+    font-size: 5vw;
+  }
 
-        .freeDeliveryReturns {
-            color: map-get($colors, primary);
-            margin-top: 10px;
-            height: 25px;
+  .module-btn {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5vw;
 
-            p {
-                color: white;
-                text-transform: none;
-                font-size: 16px;
-            }
-        }
-
-        img {
-            height: 80%;
-            width: 100%;
-        }
-
-        .item-title {
-            margin: 10px 0 0 0;
-        }
-
-        .item-subtitle {
-            margin: 5px 0;
-            color: gray;
-        }
+    .btn-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 32px;
+      margin: 10px;
     }
+  }
 }

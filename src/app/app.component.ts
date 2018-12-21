@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
-import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
 import { BagPage } from '../pages/bag/bag';
 import { SavedItemsPage } from '../pages/saved-items/saved-items';
 import { AccountPage } from '../pages/account/account';
@@ -35,7 +35,7 @@ export class MyApp {
       var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 
       if (localStorage.getItem('loginInfo') && diffDays < 28) {
-        this.rootPage = HomePage;
+        this.rootPage = TabsPage;
       } else {
         this.logOut();
       }
@@ -43,7 +43,7 @@ export class MyApp {
   }
 
   goToHome() {
-    this.nav.setRoot(HomePage);
+    this.nav.setRoot(TabsPage);
   }
 
   goToBag() {
