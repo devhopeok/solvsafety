@@ -1,0 +1,47 @@
+page-form-fill {
+  .title {
+    text-align: center;
+    font-size: 5vw;
+  }
+
+  .toolbar-title {
+    color: map-get($colors, secondary);
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-title-icon {
+    font-size: 32px;
+    padding-right: 5px;
+  }
+
+  ion-datetime {
+    padding-left: 10px !important;
+  }
+
+  ion-select {
+    padding: 10px !important;
+  }
+
+  .button-div {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+  }
+
+  .module-btn {
+    width: 35%;
+    margin: 4%;
+
+    .btn-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 32px;
+      margin: 10px;
+    }
+  }
+}

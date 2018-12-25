@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, PopoverController, Events, MenuController } from 'ionic-angular';
-import { MenWomenCategoryPopOverPage } from '../men-women-category-pop-over/men-women-category-pop-over';
-import { CategoryPage, Category } from '../category/category';
+import { FormFillPage } from '../form-fill/form-fill';
 
 @Component({
   selector: 'page-home',
@@ -23,4 +22,8 @@ export class HomePage {
   // ionViewWillEnter() {
   //   this.menuCtrl.enable(true);
   // }
+
+  gotoFormFill(module) {
+    this.navCtrl.push(FormFillPage, {module});
+  }
 }

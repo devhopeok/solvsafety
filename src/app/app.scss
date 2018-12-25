@@ -90,11 +90,19 @@ p {
     box-shadow: none !important;
 }
 
-ion-input {
+ion-input, ion-datetime, ion-select, ion-textarea {
     border: 1px solid map-get($colors, primary);
     padding: 5px 10px;
 }
 
 .toast-message {
-    background: #d93f27;
+    background: map-get($colors, danger);
+}
+
+textarea {
+    height: 100px;
+}
+
+.toast-wrapper {
+    margin-bottom: 50px !important;
 }

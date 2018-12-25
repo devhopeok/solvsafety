@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ResetPwdPage } from '../pages/reset-pwd/reset-pwd';
 import { TabsPage } from '../pages/tabs/tabs';
+import { FormFillPage } from '../pages/form-fill/form-fill';
 
 import { MenWomenCategoryPopOverPage } from '../pages/men-women-category-pop-over/men-women-category-pop-over';
 import { BagPage } from '../pages/bag/bag';
@@ -30,6 +31,7 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
     LoginPage,
     ResetPwdPage,
     TabsPage,
+    FormFillPage,
 
     MenWomenCategoryPopOverPage,
     RecommendedPopOverPage,
@@ -53,6 +55,7 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
     LoginPage,
     ResetPwdPage,
     TabsPage,
+    FormFillPage,
     
     MenWomenCategoryPopOverPage,
     RecommendedPopOverPage,
