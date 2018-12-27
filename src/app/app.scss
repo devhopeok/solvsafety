@@ -33,6 +33,10 @@ p {
     font-family: 'Segoe-UI';
 }
 
+span, .alert-message {
+    font-family: 'Segoe-UI';
+}
+
 .side-menu-item {
     ion-icon {
         font-weight: bold;        
@@ -93,10 +97,18 @@ p {
 ion-input, ion-datetime, ion-select, ion-textarea {
     border: 1px solid map-get($colors, primary);
     padding: 5px 10px;
+    font-family: 'Segoe-UI';
+}
+
+ion-label {
+    font-size: 1.4rem !important;
+    font-family: 'Segoe-UI';
 }
 
 .toast-message {
     background: map-get($colors, danger);
+    text-align: center;
+    font-family: 'Segoe-UI';
 }
 
 textarea {

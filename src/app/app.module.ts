@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { ResetPwdPage } from '../pages/reset-pwd/reset-pwd';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FormFillPage } from '../pages/form-fill/form-fill';
+import { Camera } from '@ionic-native/camera';
 
 import { MenWomenCategoryPopOverPage } from '../pages/men-women-category-pop-over/men-women-category-pop-over';
 import { BagPage } from '../pages/bag/bag';
@@ -71,6 +72,7 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
