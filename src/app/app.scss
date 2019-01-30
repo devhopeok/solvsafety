@@ -23,10 +23,10 @@
     }
 }
 
-.toolbar-title-md, .toolbar-title-ios {
-    font-family: 'Segoe-UI';
-    color: map-get($colors, primary);
-}
+// .toolbar-title-md, .toolbar-title-ios {
+//     font-family: 'Segoe-UI';
+//     color: map-get($colors, primary);
+// }
 
 p {
     color: map-get($colors, primary);
@@ -81,13 +81,16 @@ span, .alert-message {
     src: local('Segoe-UI'), local('Segoe-UI'), url("../assets/fonts/Segoe-UI.ttf") format('woff2');
 }
 
-.item-inner {
-    border: none !important;
-    padding-right: 16px !important;
-}
+// .item-inner {
+//     border: none !important;
+//     padding-right: 16px !important;
+// }
 
-.item {
-    color: map-get($colors, primary);
+// .item {
+//     color: map-get($colors, primary);
+// }
+ion-item {
+    padding-right: 16px !important;
 }
 
 .item-input-has-focus .item-inner{
@@ -100,10 +103,10 @@ ion-input, ion-datetime, ion-select, ion-textarea {
     font-family: 'Segoe-UI';
 }
 
-ion-label {
-    font-size: 1.4rem !important;
-    font-family: 'Segoe-UI';
-}
+// ion-label {
+//     font-size: 1.4rem !important;
+//     font-family: 'Segoe-UI';
+// }
 
 .toast-message {
     background: map-get($colors, danger);

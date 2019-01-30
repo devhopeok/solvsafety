@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Add Actions
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let question of globalProvider.questions">
+    <ion-card-content class="section-card" *ngIf="question.answerType == 'Section Header'">
+      {{question.question}}
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-item *ngIf="question.answerType == 'Checkbox'">
+        <ion-label>{{question.question}}</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+
+      <ion-item *ngIf="question.answerType == 'Date Time'">
+        <ion-label color="primary" stacked>{{question.question}}</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" placeholder="MM/DD/YYYY HH:mm">
+        </ion-datetime>
+        <ion-icon class="item-icon" item-end [name]="question.icon"></ion-icon>
+      </ion-item>
+
+      <div class="drawing-div" *ngIf="question.answerType == 'Drawing'">
+        <p>{{question.question}}</p>
+        <button ion-button class="draw-btn" (click)="onDraw();">
+          <ion-icon class="btn-icon" [name]="question.icon"></ion-icon>
+          Draw
+        </button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

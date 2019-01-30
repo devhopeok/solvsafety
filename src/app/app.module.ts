@@ -24,6 +24,8 @@ import { RecommendedPopOverPage } from '../pages/recommended-pop-over/recommende
 import { FilterPage } from '../pages/filter/filter';
 import { ProductSizePopOverPage } from '../pages/product-size-pop-over/product-size-pop-over';
 import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/product-colour-pop-over';
+import { AvailableFormPage } from '../pages/available-form/available-form';
+import { AddActionPage } from '../pages/add-action/add-action';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
     AccountPage,
     AppSettingsPage,
     HelpFaqPage,
-    FilterPage
+    FilterPage,
+    AvailableFormPage,
+    AddActionPage,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,9 @@ import { ProductColourPopOverPage } from '../pages/product-colour-pop-over/produ
     AccountPage,
     AppSettingsPage,
     HelpFaqPage,
-    FilterPage
+    FilterPage,
+    AvailableFormPage,
+    AddActionPage,
   ],
   providers: [
     StatusBar,
